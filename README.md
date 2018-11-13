@@ -5,5 +5,7 @@
 ## Proposal  
 
 - Remove jQuery UI
-- Remove mobile.css 
+- Remove Mobile.css 
 
+- Keep Slick Slider 
+- Keep Lightbox? 
