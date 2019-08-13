@@ -1,6 +1,7 @@
 let gulp = require('gulp');
 let cleanCSS = require('gulp-clean-css');
- 
+let  babel = require("gulp-babel");
+
 function minifycss() {
   return gulp.src('css/modules/*.css')
   .pipe(cleanCSS({
