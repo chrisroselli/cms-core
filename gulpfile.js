@@ -20,5 +20,11 @@ function minifycss() {
   .pipe(gulp.dest('dist'));
 }
 
-const build = gulp.series(minifycss);
+function babeljs() {
+  return gulp.src("src/app.js")
+    .pipe(babel())
+    .pipe(gulp.dest("dist"));
+}
+
+const build = gulp.series(minifycss,babeljs);
 exports.default = build;
