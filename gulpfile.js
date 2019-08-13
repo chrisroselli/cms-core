@@ -9,3 +9,7 @@ gulp.task('minify-css', () => {
     }))
   .pipe(gulp.dest('dist'));
 });
+
+
+const build = gulp.series(minify-css);
+exports.default = build;
