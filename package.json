@@ -1,28 +1,25 @@
 {
-  "name": "core",
-  "version": "3.5.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "gulp",
-    "test": ""
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-uglify": "^2.0.0"
-  },
-  "devDependencies": {
-    "gulp-concat-util": "^0.5.5",
-    "gulp-uglify": "^2.1.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "bugs": {
-    "url": ""
-  },
+	"name": "core",
+	"version": "3.5.1",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "gulp",
+		"test": ""
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"gulp": "^4.0.2",
+		"gulp-clean-css": "^4.2.0",
+		"gulp-uglify": "^2.0.0"
+	},
+	"devDependencies": {
+		"gulp-concat-util": "^0.5.5",
+		"gulp-uglify": "^2.1.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	}
 }
