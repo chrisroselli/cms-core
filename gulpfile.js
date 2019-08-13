@@ -13,10 +13,7 @@ function minifycss() {
       },
   }))
 
-  .pipe(rename({
-      basename: 'main-styles',
-      suffix: '.min',
-  }))
+ 
   .pipe(gulp.dest('dist/styles/'))
  
  
