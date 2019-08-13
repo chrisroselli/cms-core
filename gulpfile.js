@@ -12,10 +12,7 @@ function minifycss() {
           },
       },
   }))
-  .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-  }))
+
   .pipe(rename({
       basename: 'main-styles',
       suffix: '.min',
