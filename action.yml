@@ -1,2 +1,4 @@
-- name: Auto Minify
-  uses: nizarmah/auto-minify@v1.6
+- uses: actions/checkout@v2
+
+  - name: Auto Minify
+    uses: nizarmah/auto-minify@master
