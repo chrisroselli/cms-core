@@ -1,18 +1,23 @@
-name: Greet Everyone
+name: Minify Everyone
 # This workflow is triggered on pushes to the repository.
 on: [push]
 jobs:
   build:
     # Job name is Greeting
-    name: Greeting
+    name: Minify
     # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
-      # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
+      # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
+      - uses: actions/checkout@v2
+
       - name: Auto Minify
-        uses: nizarmah/auto-minify@v1.6
+        uses: nizarmah/auto-minify@master
+
+      # Auto commits minified files to the repository
+      # Ignore it if you don't want to commit the files to the repository 
+      - name: Auto committing minified files
+        uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
-          # Directory that contains the files you want to minify. Defaults to current directory (.)
-          directory: /css/* # optional, default is .
-          # Directory that contains the minified files. Defaults to same directory
-          output: /dist # optional, default is 
+          commit_message: "Github Action: Auto Minified JS and CSS files"
+          branch: ${{ github.ref }}
