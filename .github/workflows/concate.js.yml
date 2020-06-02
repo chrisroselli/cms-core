@@ -25,6 +25,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install concat-cli
-    - run: concat-cli -f /js/*.js -o bundle.js
-    - run: console.log("hi");
+    - run: npm run build
+ 
  
