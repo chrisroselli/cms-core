@@ -25,4 +25,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install concat-cli
-    - run: concat-glob-cli -f /js/**/*.js -o bundle.js
+    - run: concat-cli -f /js/*.js -o bundle.js
+
+  - name: Auto committing minified files
+        uses: stefanzweifel/git-auto-commit-action@v3.0.0
+        with:
+          commit_message: "Github Action: Bundled files"
+          branch: ${{ github.ref }}
