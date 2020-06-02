@@ -3,7 +3,7 @@ let cleanCSS = require('gulp-clean-css');
 let  babel = require("gulp-babel");
 
 function minifycss() {
-  return gulp.src('css/modules/*.css')
+  return gulp.src('css/**/*.css')
   .pipe(cleanCSS({
       debug: true,
       compatibility: 'ie8',
@@ -22,7 +22,7 @@ function minifycss() {
 }
 
 function babeljs() {
-  return gulp.src("src/app.js")
+  return gulp.src("js/*.js")
     .pipe(babel())
     .pipe(gulp.dest("dist"));
 }
