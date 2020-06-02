@@ -1,6 +1,6 @@
 name: Minify Everyone
 # This workflow is triggered on pushes to the repository.
-on: [push]
+on: []
 jobs:
   build:
     # Job name is Greeting
